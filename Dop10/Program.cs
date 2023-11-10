@@ -45,6 +45,7 @@ namespace Dop10
 
     public class AdvancedCalculator : ICalculatable, IStorable
     {
+        private double result;
         public double Add(double a, double b) => a + b;
         public double Subtract(double a, double b) => a - b;
         public double Multiply(double a, double b) => a * b;
@@ -103,6 +104,7 @@ namespace Dop10
 
         private void CopyState(AdvancedCalculator other)
         {
+            this.result = other.result;
         }
     }
 
@@ -118,6 +120,7 @@ namespace Dop10
             double result2 = advancedCalculator.Power(2, 3);
             advancedCalculator.DisplayResult(result2);
 
+            //Сохранение ошибка
             advancedCalculator.SaveState("calculator_state.txt");
             advancedCalculator.LoadState("calculator_state.txt");
             Console.ReadKey();
