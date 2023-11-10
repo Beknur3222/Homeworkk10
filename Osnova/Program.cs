@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using PersonAssembly;
 
-
+//Я непонел как решить проблему
 namespace Osnova
 {
     internal class Program
